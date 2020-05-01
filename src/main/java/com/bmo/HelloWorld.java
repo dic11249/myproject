@@ -5,7 +5,10 @@ public class HelloWorld {
 //        System.out.println("Hello");
         Person p = new Person();
         p.hello();
-        int age = 19;
+        p.weight = 66.5f;
+        p.height = 1.7f;
+        System.out.println(p.bmi());
+        /*int age = 19;
         Integer age2 = 19;
         char c = 'A';
         Character c2 = 'A';
@@ -14,6 +17,6 @@ public class HelloWorld {
         double height = 1.7;
         boolean adult = true;
         boolean enroll = false;
-        String name = "Bmo";
+        String name = "Bmo";*/
     }
 }
