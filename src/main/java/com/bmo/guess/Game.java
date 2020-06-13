@@ -3,7 +3,7 @@ package com.bmo.guess;
 import java.util.Random;
 import java.util.Scanner;
 
-public class game {
+public class Game {
     public static void main(String[] args) {
         Random random = new Random();
         int secret = random.nextInt(10)+1;
