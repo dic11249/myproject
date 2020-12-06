@@ -4,12 +4,25 @@ import java.util.*
 
 fun main() {
 //    userInput();
-    val stu = Student("Bmo", 88, 50);
+    Student.pass = 50;
+    val stu = Student("Bmo0", 88, 50);
+    val stu1 = Student("Bmo1", 60, 50);
+    val stu2 = Student("Bmo2", 20, 80);
     stu.print();
+    stu1.print();
+    stu2.print();
     println("High score: ${stu.highest()}");
 }
 
 class Student(var name:String, var english:Int, var math:Int) {
+    companion object {
+        @JvmStatic
+        var pass = 60;
+        fun test() {
+            println("testing");
+        }
+    }
+
     fun print() {
         println("$name\t$english\t$math\t${getAverage()}\t${passOrFailed()}\t${grading()}");
     }
@@ -22,7 +35,7 @@ class Student(var name:String, var english:Int, var math:Int) {
         else -> 'F';
     }
 
-    fun passOrFailed() = if(getAverage() >= 60) "Pass" else "failed";
+    fun passOrFailed() = if(getAverage() >= pass) "Pass" else "failed";
 
     fun getAverage() =  (english+math)/2;
 
